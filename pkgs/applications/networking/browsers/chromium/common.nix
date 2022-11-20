@@ -164,6 +164,8 @@ let
       # (we currently package 1.26 in Nixpkgs while Chromium bundles 1.21):
       # Source: https://bugs.chromium.org/p/angleproject/issues/detail?id=7582#c1
       ./patches/angle-wayland-include-protocol.patch
+      # Enable VAAPI and wayland, from https://aur.archlinux.org/cgit/aur.git/tree/0001-ozone-wayland-add-VA-API-support.patch?h=chromium-wayland-vaapi
+      ./patches/enable-vaapi-wayland.patch
     ];
 
     postPatch = ''
